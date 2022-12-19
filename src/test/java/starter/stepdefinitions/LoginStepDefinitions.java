@@ -35,4 +35,9 @@ public class LoginStepDefinitions {
     public void validateLogin(Actor actor, String products) {
         actor.attemptsTo(Ensure.that(SwagLabsShop.HEADER_TITLE).hasText(products));
     }
+
+    @Then("{actor} will receive the error message {string}")
+    public void validateError(Actor actor, String message) {
+        actor.attemptsTo(Ensure.that(SwagLabsShop.ERROR_CONTAINER).hasText(message));
+    }
 }

@@ -1,21 +1,21 @@
 Feature: Login to SwagLabs dashboard
-  Scenario: Login with valid credentials to standard user
+
+  Scenario Outline: Login with valid credentials to <type> user
     Given Marianella is on login page
-    When she enter "standard_user" as username
+    When she enter "<username>" as username
     And she enter "secret_sauce" as password
     And she clicks the login button
     Then she should be able to see the "PRODUCTS"
 
-  Scenario: Login with valid credentials to problem user
-    Given Marianella is on login page
-    When she enter "problem_user" as username
-    And she enter "secret_sauce" as password
-    And she clicks the login button
-    Then she should be able to see the "PRODUCTS"
+    Examples:
+      | type                | username                |
+      | standard            | standard_user           |
+      | problem             | problem_user            |
+      | performance glitch  | performance_glitch_user |
 
-  Scenario: Login with valid credentials to performance glitch user
+  Scenario: Login with valid credentials to locked out user
     Given Marianella is on login page
-    When she enter "performance_glitch_user" as username
+    When she enter "locked_out_user" as username
     And she enter "secret_sauce" as password
     And she clicks the login button
-    Then she should be able to see the "PRODUCTS"
+    Then she will receive the error message "Epic sadface: Sorry, this user has been locked out."
