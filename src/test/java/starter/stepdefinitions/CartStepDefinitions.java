@@ -8,6 +8,7 @@ import starter.pages.articledetail.ArticleDetailInteraction;
 import starter.pages.articleslist.ArticlesListForm;
 import starter.pages.articleslist.ArticlesListInteraction;
 import starter.pages.cartdetail.CartDetailInteraction;
+import starter.pages.checkout.CheckoutInteraction;
 import starter.pages.headers.HeadersContent;
 import starter.pages.headers.HeadersInteraction;
 
@@ -43,23 +44,23 @@ public class CartStepDefinitions {
     }
 
     @When("{actor} enter {string} as first name")
-    public void inputFirstName(Actor actor, String string) {
-
+    public void inputFirstName(Actor actor, String firstName) {
+        actor.attemptsTo(CheckoutInteraction.fillFirstNameField(firstName));
     }
 
     @When("{actor} enter {string} as last name")
-    public void inputLastName(Actor actor, String string) {
-
+    public void inputLastName(Actor actor, String lastName) {
+        actor.attemptsTo(CheckoutInteraction.fillLastNameField(lastName));
     }
 
     @When("{actor} enter {string} as postal code")
-    public void inputPostalCode(Actor actor, String string) {
-
+    public void inputPostalCode(Actor actor, String postalCode) {
+        actor.attemptsTo(CheckoutInteraction.fillPostalCodeField(postalCode));
     }
 
     @When("{actor} continue to confirm purchase")
     public void clickOnContinueButton(Actor actor) {
-
+        actor.attemptsTo(CheckoutInteraction.clickOnContinueButton());
     }
 
     @When("{actor} finish the purchase")

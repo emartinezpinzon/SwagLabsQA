@@ -16,7 +16,7 @@ Feature: Confirm purchase of items added to cart
     And she finish the purchase
     Then she should be able to see the "CHECKOUT: COMPLETE!"
 
-  Scenario Outline: Try to confirm the purchase without entering the <empty_field> in the shipping information
+  Scenario Outline: Try to confirm the purchase without entering the <type_field> in the shipping information
     Given Marianella is on login page
     When she enter "standard_user" as username
     And she enter "secret_sauce" as password
@@ -32,7 +32,8 @@ Feature: Confirm purchase of items added to cart
     Then she will receive the error message "Error: <empty_field> is required"
 
     Examples:
-      | empty_field | first_name  | last_name   | postal_code    |
-      | first name  |             | Martinez    | 570013         |
-      | last name   | Emanuel     |             | 570013         |
-      | postal code | Emanuel     | Martinez    |                |
+      | type_field  | first_name  | last_name   | postal_code    | empty_field |
+      | first name  |             | Martinez    | 570013         | First Name  |
+      | last name   | Emanuel     |             | 570013         | Last Name   |
+      | postal code | Emanuel     | Martinez    |                | Postal Code |
+      | nothing     |             |             |                | First Name  |
