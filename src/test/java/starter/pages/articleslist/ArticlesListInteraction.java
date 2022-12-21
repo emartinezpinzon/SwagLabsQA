@@ -9,6 +9,6 @@ import starter.pages.login.LoginForm;
 public class ArticlesListInteraction {
     public static Performable clickOnArticleName(String article) {
         return Task.where("{0} clicks on any article",
-                Click.on(ArticlesListContent.getArticleByName(article)));
+                Click.on(ArticlesListForm.getArticleByName(article)));
     }
 }
