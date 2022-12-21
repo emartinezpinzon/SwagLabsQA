@@ -42,39 +42,33 @@ public class CartStepDefinitions {
         actor.attemptsTo(Ensure.that(ArticlesListForm.getArticleByName(article)).hasText(article));
     }
 
-    @When("she clicks on checkout button")
-    public void she_clicks_on_checkout_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("{actor} clicks on checkout button")
+    public void clickOnCheckoutButton(Actor actor) {
+
     }
 
-    @When("she enter {string} as first name")
-    public void she_enter_as_first_name(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("{actor} enter {string} as first name")
+    public void inputFirstName(Actor actor, String string) {
+
     }
 
-    @When("she enter {string} as last name")
-    public void she_enter_as_last_name(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("{actor} enter {string} as last name")
+    public void inputLastName(Actor actor, String string) {
+
     }
 
-    @When("she enter {string} as postal code")
-    public void she_enter_as_postal_code(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("{actor} enter {string} as postal code")
+    public void inputPostalCode(Actor actor, String string) {
+
     }
 
-    @When("she continue to confirm purchase")
-    public void she_continue_to_confirm_purchase() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("{actor} continue to confirm purchase")
+    public void clickOnContinueButton(Actor actor) {
+
     }
-    
-    @When("she finish the purchase")
-    public void she_finish_the_purchase() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @When("{actor} finish the purchase")
+    public void clickOnFinishPurchaseButton(Actor actor) {
+
     }
 }
