@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 public class LoginFormInteraction {
 
     public static Performable fillUsernameField(String username) {
-        return Task.where("{0} enter standard_user as username",
+        return Task.where("{0} enter any user as username",
                 Enter.theValue(username)
                         .into(LoginForm.USERNAME_FIELD)
         );
@@ -21,7 +21,7 @@ public class LoginFormInteraction {
         );
     }
 
-    public static Performable clickLoginButton() {
+    public static Performable clickOnLoginButton() {
         return Task.where("{0} clicks the login button",
                 Click.on(LoginForm.LOGIN_BUTTON));
     }

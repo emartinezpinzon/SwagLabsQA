@@ -29,7 +29,7 @@ public class LoginStepDefinitions {
 
     @When("{actor} clicks the login button")
     public void clickEnter(Actor actor) {
-        actor.attemptsTo(LoginFormInteraction.clickLoginButton());
+        actor.attemptsTo(LoginFormInteraction.clickOnLoginButton());
     }
 
     @Then("{actor} should be able to see the {string}")
