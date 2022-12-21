@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import starter.pages.login.LoginForm;
 
 public class CheckoutInteraction {
     public static Performable fillFirstNameField(String firstName) {
@@ -31,6 +30,11 @@ public class CheckoutInteraction {
     public static Performable clickOnContinueButton() {
         return Task.where("{0} continue to confirm purchase",
                 Click.on(CheckoutForm.CONTINUE_BUTTON));
+    }
+
+    public static Performable clickOnFinishButton() {
+        return Task.where("{0} finish the purchase",
+                Click.on(CheckoutForm.FINISH_BUTTON));
     }
 
 }

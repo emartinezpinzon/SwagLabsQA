@@ -65,6 +65,6 @@ public class CartStepDefinitions {
 
     @When("{actor} finish the purchase")
     public void clickOnFinishPurchaseButton(Actor actor) {
-
+        actor.attemptsTo(CheckoutInteraction.clickOnFinishButton());
     }
 }
