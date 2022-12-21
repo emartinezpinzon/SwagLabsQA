@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import starter.pages.articleslist.ArticlesListContent;
+import starter.pages.headers.HeadersContent;
 import starter.pages.login.LoginFormInteraction;
 import starter.pages.login.LoginContent;
 import starter.navigation.NavigateTo;
@@ -34,7 +34,7 @@ public class LoginStepDefinitions {
 
     @Then("{actor} should be able to see the {string}")
     public void validateLogin(Actor actor, String products) {
-        actor.attemptsTo(Ensure.that(ArticlesListContent.HEADER_TITLE).hasText(products));
+        actor.attemptsTo(Ensure.that(HeadersContent.HEADER_TITLE).hasText(products));
     }
 
     @Then("{actor} will receive the error message {string}")

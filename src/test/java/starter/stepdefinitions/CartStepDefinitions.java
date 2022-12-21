@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import starter.pages.articledetail.ArticleDetailInteraction;
 import starter.pages.articleslist.ArticlesListInteraction;
-import starter.pages.primaryheader.PrimaryHeaderInteraction;
+import starter.pages.headers.HeadersInteraction;
 
 public class CartStepDefinitions {
     @When("{actor} clicks on {string} article")
@@ -25,7 +25,7 @@ public class CartStepDefinitions {
     @When("{actor} clicks on cart icon")
     public void clickOnCartIcon(Actor actor) {
         actor.attemptsTo(
-                PrimaryHeaderInteraction.clickOnCartIcon()
+                HeadersInteraction.clickOnCartIcon()
         );
     }
 

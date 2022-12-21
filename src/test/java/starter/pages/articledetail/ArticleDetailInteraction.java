@@ -3,7 +3,6 @@ package starter.pages.articledetail;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import starter.pages.articleslist.ArticlesListContent;
 
 public class ArticleDetailInteraction {
     public static Performable clickOnAddToCartButton() {

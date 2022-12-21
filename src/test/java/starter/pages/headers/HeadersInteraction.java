@@ -1,13 +1,12 @@
-package starter.pages.primaryheader;
+package starter.pages.headers;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import starter.pages.login.LoginForm;
 
-public class PrimaryHeaderInteraction {
+public class HeadersInteraction {
     public static Performable clickOnCartIcon() {
         return Task.where("{0} clicks on cart icon",
-                Click.on(PrimaryHeaderContent.CART_ICON));
+                Click.on(HeadersContent.CART_ICON));
     }
 }
