@@ -1,8 +1,7 @@
-package starter.login;
+package starter.pages.login;
 
 import net.serenitybdd.screenplay.targets.Target;
 
-public class SwagLabsShop {
-    public static final Target HEADER_TITLE =  Target.the("title").locatedBy(".title");
+public class LoginContent {
     public static final Target ERROR_CONTAINER = Target.the("error message container").locatedBy(".error-message-container");
 }

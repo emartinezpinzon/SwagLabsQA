@@ -1,2 +1,7 @@
-package starter.pages.articleslist;public class ArticleListContent {
+package starter.pages.articleslist;
+
+import net.serenitybdd.screenplay.targets.Target;
+
+public class ArticleListContent {
+    public static final Target HEADER_TITLE =  Target.the("title").locatedBy(".title");
 }

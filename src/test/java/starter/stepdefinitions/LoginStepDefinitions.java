@@ -5,8 +5,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import starter.login.LoginFormInteraction;
-import starter.login.SwagLabsShop;
+import starter.pages.articleslist.ArticleListContent;
+import starter.pages.login.LoginFormInteraction;
+import starter.pages.login.LoginContent;
 import starter.navigation.NavigateTo;
 
 public class LoginStepDefinitions {
@@ -33,11 +34,11 @@ public class LoginStepDefinitions {
 
     @Then("{actor} should be able to see the {string}")
     public void validateLogin(Actor actor, String products) {
-        actor.attemptsTo(Ensure.that(SwagLabsShop.HEADER_TITLE).hasText(products));
+        actor.attemptsTo(Ensure.that(ArticleListContent.HEADER_TITLE).hasText(products));
     }
 
     @Then("{actor} will receive the error message {string}")
     public void validateError(Actor actor, String message) {
-        actor.attemptsTo(Ensure.that(SwagLabsShop.ERROR_CONTAINER).hasText(message));
+        actor.attemptsTo(Ensure.that(LoginContent.ERROR_CONTAINER).hasText(message));
     }
 }
