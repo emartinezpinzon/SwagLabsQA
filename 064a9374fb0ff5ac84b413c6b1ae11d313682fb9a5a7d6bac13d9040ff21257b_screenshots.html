@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity and Cucumber Quick Start</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="bb489f7ac667aa507b23e0530d5a6b579e44710bcfbb4d562a50df4aad78ecc9.html">Confirm Purchase Of Items Added To Cart</a></span>
+                > <span class="truncate-60"><a
+                    href="064a9374fb0ff5ac84b413c6b1ae11d313682fb9a5a7d6bac13d9040ff21257b.html">Try to confirm the purchase without entering the <type_field> in the shipping information </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-12-2022 16:53</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Confirm Purchase Of Items Added To Cart </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Try to confirm the purchase without entering the &lt;type_field&gt; in the shipping information
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Marianella is on login page<br>When she enter "standard_user" as username<br>And she enter "secret_sauce" as password<br>And she clicks the login button<br>And she clicks on "Sauce Labs Fleece Jacket" article<br>And she clicks on add to cart button<br>And she clicks on cart icon<br>And she clicks on checkout button<br>And she enter "&lt;first_name&gt;" as first name<br>And she enter "&lt;last_name&gt;" as last name<br>And she enter "&lt;postal_code&gt;" as postal code<br>And she continue to confirm purchase<br>Then she will receive the error message "Error: &lt;empty_field&gt; is required"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" 1: Try to confirm the purchase without entering the first name in the shipping information ({type_field=first name, first_name=, last_name=Martinez, postal_code=570013, empty_field=First Name})" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Given Marianella is on login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella is on login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella opens the Swag labs login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella is on login page (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Given Marianella is on login page (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" When she enter &quot;standard_user&quot; as username" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" she enter any user as username" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" she enters 'standard_user' into username field" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enters 'standard_user' into username field (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enter any user as username (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" When she enter &quot;standard_user&quot; as username (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" And she enter &quot;secret_sauce&quot; as password" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enter secret_sauce as password" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enters 'secret_sauce' into password field" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she enters 'secret_sauce' into password field (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she enter secret_sauce as password (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" And she enter &quot;secret_sauce&quot; as password (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" And she clicks the login button" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she clicks the login button" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she clicks on login button" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks the login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" And she clicks the login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on any article" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on article name containing text 'Sauce Labs Fleece Jacket'" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on article name containing text 'Sauce Labs Fleece Jacket' (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on any article (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" And she clicks on add to cart button" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on add to cart button" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on add to cart containing text 'Add to cart'" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on add to cart containing text 'Add to cart' (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on add to cart button (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" And she clicks on add to cart button (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" And she clicks on cart icon" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on cart icon" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on cart icon" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" And she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" And she clicks on checkout button" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on checkout button" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on checkout button" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" And she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" And she enter &quot;&quot; as first name" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she enter a value as first name" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she enters '' into first name field" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" she enters '' into first name field (completed)" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" she enter a value as first name (completed)" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" And she enter &quot;&quot; as first name (completed)" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" And she enter &quot;Martinez&quot; as last name" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" she enter a value as last name" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" she enters 'Martinez' into last name field" width="1000"/>
+                <img src="6b6051fad18d29c144f67d5bc7e6375f3dd3a2c80f0c9417bcff18af55094847.png" title=" she enters 'Martinez' into last name field (completed)" width="1000"/>
+                <img src="6b6051fad18d29c144f67d5bc7e6375f3dd3a2c80f0c9417bcff18af55094847.png" title=" she enter a value as last name (completed)" width="1000"/>
+                <img src="6b6051fad18d29c144f67d5bc7e6375f3dd3a2c80f0c9417bcff18af55094847.png" title=" And she enter &quot;Martinez&quot; as last name (completed)" width="1000"/>
+                <img src="6b6051fad18d29c144f67d5bc7e6375f3dd3a2c80f0c9417bcff18af55094847.png" title=" And she enter &quot;570013&quot; as postal code" width="1000"/>
+                <img src="6b6051fad18d29c144f67d5bc7e6375f3dd3a2c80f0c9417bcff18af55094847.png" title=" she enter a value as postal code" width="1000"/>
+                <img src="6b6051fad18d29c144f67d5bc7e6375f3dd3a2c80f0c9417bcff18af55094847.png" title=" she enters '570013' into postal code field" width="1000"/>
+                <img src="4c30f9129ff9fcd0d6a86971f0ae374289a4f88531650ea7b9d28316300d6b19.png" title=" she enters '570013' into postal code field (completed)" width="1000"/>
+                <img src="4c30f9129ff9fcd0d6a86971f0ae374289a4f88531650ea7b9d28316300d6b19.png" title=" she enter a value as postal code (completed)" width="1000"/>
+                <img src="4c30f9129ff9fcd0d6a86971f0ae374289a4f88531650ea7b9d28316300d6b19.png" title=" And she enter &quot;570013&quot; as postal code (completed)" width="1000"/>
+                <img src="4c30f9129ff9fcd0d6a86971f0ae374289a4f88531650ea7b9d28316300d6b19.png" title=" And she continue to confirm purchase" width="1000"/>
+                <img src="4c30f9129ff9fcd0d6a86971f0ae374289a4f88531650ea7b9d28316300d6b19.png" title=" she continue to confirm purchase" width="1000"/>
+                <img src="4c30f9129ff9fcd0d6a86971f0ae374289a4f88531650ea7b9d28316300d6b19.png" title=" she clicks on continue button" width="1000"/>
+                <img src="0deb8efc230da18b140b85a941ef2c394333bcdc93451fa883e1a0f5ce573df3.png" title=" she clicks on continue button (completed)" width="1000"/>
+                <img src="0deb8efc230da18b140b85a941ef2c394333bcdc93451fa883e1a0f5ce573df3.png" title=" she continue to confirm purchase (completed)" width="1000"/>
+                <img src="0deb8efc230da18b140b85a941ef2c394333bcdc93451fa883e1a0f5ce573df3.png" title=" And she continue to confirm purchase (completed)" width="1000"/>
+                <img src="0deb8efc230da18b140b85a941ef2c394333bcdc93451fa883e1a0f5ce573df3.png" title=" Then she will receive the error message &quot;Error: First Name is required&quot;" width="1000"/>
+                <img src="0deb8efc230da18b140b85a941ef2c394333bcdc93451fa883e1a0f5ce573df3.png" title=" she should see error message container with text value that is equal to: &lt;&quot;Error: First Name is required&quot;&gt;" width="1000"/>
+                <img src="0deb8efc230da18b140b85a941ef2c394333bcdc93451fa883e1a0f5ce573df3.png" title=" 1: Try to confirm the purchase without entering the first name in the shipping information ({type_field=first name, first_name=, last_name=Martinez, postal_code=570013, empty_field=First Name}) (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" 2: Try to confirm the purchase without entering the last name in the shipping information ({type_field=last name, first_name=Emanuel, last_name=, postal_code=570013, empty_field=Last Name})" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Given Marianella is on login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella is on login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella opens the Swag labs login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella is on login page (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Given Marianella is on login page (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" When she enter &quot;standard_user&quot; as username" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" she enter any user as username" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" she enters 'standard_user' into username field" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enters 'standard_user' into username field (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enter any user as username (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" When she enter &quot;standard_user&quot; as username (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" And she enter &quot;secret_sauce&quot; as password" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enter secret_sauce as password" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enters 'secret_sauce' into password field" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she enters 'secret_sauce' into password field (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she enter secret_sauce as password (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" And she enter &quot;secret_sauce&quot; as password (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" And she clicks the login button" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she clicks the login button" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she clicks on login button" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks the login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" And she clicks the login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on any article" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on article name containing text 'Sauce Labs Fleece Jacket'" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on article name containing text 'Sauce Labs Fleece Jacket' (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on any article (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" And she clicks on add to cart button" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on add to cart button" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on add to cart containing text 'Add to cart'" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on add to cart containing text 'Add to cart' (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on add to cart button (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" And she clicks on add to cart button (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" And she clicks on cart icon" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on cart icon" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on cart icon" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" And she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" And she clicks on checkout button" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on checkout button" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on checkout button" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" And she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" And she enter &quot;Emanuel&quot; as first name" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she enter a value as first name" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she enters 'Emanuel' into first name field" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" she enters 'Emanuel' into first name field (completed)" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" she enter a value as first name (completed)" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" And she enter &quot;Emanuel&quot; as first name (completed)" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" And she enter &quot;&quot; as last name" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" she enter a value as last name" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" she enters '' into last name field" width="1000"/>
+                <img src="d299d0ff68011a355795df917ff660062219d723badc4825d289de2dca8ed64c.png" title=" she enters '' into last name field (completed)" width="1000"/>
+                <img src="d299d0ff68011a355795df917ff660062219d723badc4825d289de2dca8ed64c.png" title=" she enter a value as last name (completed)" width="1000"/>
+                <img src="d299d0ff68011a355795df917ff660062219d723badc4825d289de2dca8ed64c.png" title=" And she enter &quot;&quot; as last name (completed)" width="1000"/>
+                <img src="d299d0ff68011a355795df917ff660062219d723badc4825d289de2dca8ed64c.png" title=" And she enter &quot;570013&quot; as postal code" width="1000"/>
+                <img src="d299d0ff68011a355795df917ff660062219d723badc4825d289de2dca8ed64c.png" title=" she enter a value as postal code" width="1000"/>
+                <img src="d299d0ff68011a355795df917ff660062219d723badc4825d289de2dca8ed64c.png" title=" she enters '570013' into postal code field" width="1000"/>
+                <img src="a1df297c3e3c723c6640cefa8c1999cabb98095e8b26ab9efde75a2bd6e14553.png" title=" she enters '570013' into postal code field (completed)" width="1000"/>
+                <img src="a1df297c3e3c723c6640cefa8c1999cabb98095e8b26ab9efde75a2bd6e14553.png" title=" she enter a value as postal code (completed)" width="1000"/>
+                <img src="a1df297c3e3c723c6640cefa8c1999cabb98095e8b26ab9efde75a2bd6e14553.png" title=" And she enter &quot;570013&quot; as postal code (completed)" width="1000"/>
+                <img src="a1df297c3e3c723c6640cefa8c1999cabb98095e8b26ab9efde75a2bd6e14553.png" title=" And she continue to confirm purchase" width="1000"/>
+                <img src="a1df297c3e3c723c6640cefa8c1999cabb98095e8b26ab9efde75a2bd6e14553.png" title=" she continue to confirm purchase" width="1000"/>
+                <img src="a1df297c3e3c723c6640cefa8c1999cabb98095e8b26ab9efde75a2bd6e14553.png" title=" she clicks on continue button" width="1000"/>
+                <img src="9e0e693b1438d6dcb4edf2dcd2990d13749187515d7b997c5a40536e8ae3d0fa.png" title=" she clicks on continue button (completed)" width="1000"/>
+                <img src="9e0e693b1438d6dcb4edf2dcd2990d13749187515d7b997c5a40536e8ae3d0fa.png" title=" she continue to confirm purchase (completed)" width="1000"/>
+                <img src="9e0e693b1438d6dcb4edf2dcd2990d13749187515d7b997c5a40536e8ae3d0fa.png" title=" And she continue to confirm purchase (completed)" width="1000"/>
+                <img src="9e0e693b1438d6dcb4edf2dcd2990d13749187515d7b997c5a40536e8ae3d0fa.png" title=" Then she will receive the error message &quot;Error: Last Name is required&quot;" width="1000"/>
+                <img src="9e0e693b1438d6dcb4edf2dcd2990d13749187515d7b997c5a40536e8ae3d0fa.png" title=" she should see error message container with text value that is equal to: &lt;&quot;Error: Last Name is required&quot;&gt;" width="1000"/>
+                <img src="9e0e693b1438d6dcb4edf2dcd2990d13749187515d7b997c5a40536e8ae3d0fa.png" title=" 2: Try to confirm the purchase without entering the last name in the shipping information ({type_field=last name, first_name=Emanuel, last_name=, postal_code=570013, empty_field=Last Name}) (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" 3: Try to confirm the purchase without entering the postal code in the shipping information ({type_field=postal code, first_name=Emanuel, last_name=Martinez, postal_code=, empty_field=Postal Code})" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Given Marianella is on login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella is on login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella opens the Swag labs login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella is on login page (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Given Marianella is on login page (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" When she enter &quot;standard_user&quot; as username" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" she enter any user as username" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" she enters 'standard_user' into username field" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enters 'standard_user' into username field (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enter any user as username (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" When she enter &quot;standard_user&quot; as username (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" And she enter &quot;secret_sauce&quot; as password" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enter secret_sauce as password" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enters 'secret_sauce' into password field" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she enters 'secret_sauce' into password field (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she enter secret_sauce as password (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" And she enter &quot;secret_sauce&quot; as password (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" And she clicks the login button" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she clicks the login button" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she clicks on login button" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks the login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" And she clicks the login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on any article" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on article name containing text 'Sauce Labs Fleece Jacket'" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on article name containing text 'Sauce Labs Fleece Jacket' (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on any article (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" And she clicks on add to cart button" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on add to cart button" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on add to cart containing text 'Add to cart'" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on add to cart containing text 'Add to cart' (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on add to cart button (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" And she clicks on add to cart button (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" And she clicks on cart icon" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on cart icon" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on cart icon" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" And she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" And she clicks on checkout button" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on checkout button" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on checkout button" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" And she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" And she enter &quot;Emanuel&quot; as first name" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she enter a value as first name" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she enters 'Emanuel' into first name field" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" she enters 'Emanuel' into first name field (completed)" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" she enter a value as first name (completed)" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" And she enter &quot;Emanuel&quot; as first name (completed)" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" And she enter &quot;Martinez&quot; as last name" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" she enter a value as last name" width="1000"/>
+                <img src="a58009458bffbb0405d9327657dcb25f8558c6ccc64d27b22cc95926cc020e72.png" title=" she enters 'Martinez' into last name field" width="1000"/>
+                <img src="f12301d6681adf9e316112f4dcc1157153cb49d458c58730dec1582a04b3b7c3.png" title=" she enters 'Martinez' into last name field (completed)" width="1000"/>
+                <img src="f12301d6681adf9e316112f4dcc1157153cb49d458c58730dec1582a04b3b7c3.png" title=" she enter a value as last name (completed)" width="1000"/>
+                <img src="f12301d6681adf9e316112f4dcc1157153cb49d458c58730dec1582a04b3b7c3.png" title=" And she enter &quot;Martinez&quot; as last name (completed)" width="1000"/>
+                <img src="f12301d6681adf9e316112f4dcc1157153cb49d458c58730dec1582a04b3b7c3.png" title=" And she enter &quot;&quot; as postal code" width="1000"/>
+                <img src="f12301d6681adf9e316112f4dcc1157153cb49d458c58730dec1582a04b3b7c3.png" title=" she enter a value as postal code" width="1000"/>
+                <img src="f12301d6681adf9e316112f4dcc1157153cb49d458c58730dec1582a04b3b7c3.png" title=" she enters '' into postal code field" width="1000"/>
+                <img src="4aaf6ddeb89ddffbae7014ec09a4d7a0a2f3101a50c3cc4517561ac1119d904e.png" title=" she enters '' into postal code field (completed)" width="1000"/>
+                <img src="4aaf6ddeb89ddffbae7014ec09a4d7a0a2f3101a50c3cc4517561ac1119d904e.png" title=" she enter a value as postal code (completed)" width="1000"/>
+                <img src="4aaf6ddeb89ddffbae7014ec09a4d7a0a2f3101a50c3cc4517561ac1119d904e.png" title=" And she enter &quot;&quot; as postal code (completed)" width="1000"/>
+                <img src="4aaf6ddeb89ddffbae7014ec09a4d7a0a2f3101a50c3cc4517561ac1119d904e.png" title=" And she continue to confirm purchase" width="1000"/>
+                <img src="4aaf6ddeb89ddffbae7014ec09a4d7a0a2f3101a50c3cc4517561ac1119d904e.png" title=" she continue to confirm purchase" width="1000"/>
+                <img src="4aaf6ddeb89ddffbae7014ec09a4d7a0a2f3101a50c3cc4517561ac1119d904e.png" title=" she clicks on continue button" width="1000"/>
+                <img src="4c8558eb7e1c74b642d39f453f774b96dff110fc8e3469c9ee0eb2f275f8a03b.png" title=" she clicks on continue button (completed)" width="1000"/>
+                <img src="4c8558eb7e1c74b642d39f453f774b96dff110fc8e3469c9ee0eb2f275f8a03b.png" title=" she continue to confirm purchase (completed)" width="1000"/>
+                <img src="4c8558eb7e1c74b642d39f453f774b96dff110fc8e3469c9ee0eb2f275f8a03b.png" title=" And she continue to confirm purchase (completed)" width="1000"/>
+                <img src="4c8558eb7e1c74b642d39f453f774b96dff110fc8e3469c9ee0eb2f275f8a03b.png" title=" Then she will receive the error message &quot;Error: Postal Code is required&quot;" width="1000"/>
+                <img src="4c8558eb7e1c74b642d39f453f774b96dff110fc8e3469c9ee0eb2f275f8a03b.png" title=" she should see error message container with text value that is equal to: &lt;&quot;Error: Postal Code is required&quot;&gt;" width="1000"/>
+                <img src="4c8558eb7e1c74b642d39f453f774b96dff110fc8e3469c9ee0eb2f275f8a03b.png" title=" 3: Try to confirm the purchase without entering the postal code in the shipping information ({type_field=postal code, first_name=Emanuel, last_name=Martinez, postal_code=, empty_field=Postal Code}) (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" 4: Try to confirm the purchase without entering the nothing in the shipping information ({type_field=nothing, first_name=, last_name=, postal_code=, empty_field=First Name})" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Given Marianella is on login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella is on login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella opens the Swag labs login page" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Marianella is on login page (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" Given Marianella is on login page (completed)" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" When she enter &quot;standard_user&quot; as username" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" she enter any user as username" width="1000"/>
+                <img src="6eff7ae48c7a9bf64a9bd289eb4e326b6ef95acc023c854885d4eca544b42457.png" title=" she enters 'standard_user' into username field" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enters 'standard_user' into username field (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enter any user as username (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" When she enter &quot;standard_user&quot; as username (completed)" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" And she enter &quot;secret_sauce&quot; as password" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enter secret_sauce as password" width="1000"/>
+                <img src="be925226fd1e649c9b3b7f85bc7880ac8d143db3113579a71f05af1c90edf766.png" title=" she enters 'secret_sauce' into password field" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she enters 'secret_sauce' into password field (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she enter secret_sauce as password (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" And she enter &quot;secret_sauce&quot; as password (completed)" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" And she clicks the login button" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she clicks the login button" width="1000"/>
+                <img src="abb9522723775f0ebfe0e59e3c74053021af12eb1a0b9e1bad98f3d9e4b241b0.png" title=" she clicks on login button" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks the login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" And she clicks the login button (completed)" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on any article" width="1000"/>
+                <img src="346bf492108c97ae9561cf4e8b2dfd3e313574c6b32f210d4014711b87c6584c.png" title=" she clicks on article name containing text 'Sauce Labs Fleece Jacket'" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on article name containing text 'Sauce Labs Fleece Jacket' (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on any article (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article (completed)" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" And she clicks on add to cart button" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on add to cart button" width="1000"/>
+                <img src="2ccb77cabae13233d262dcd76290acd620572e16359fb5ee796bf676a22f26f4.png" title=" she clicks on add to cart containing text 'Add to cart'" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on add to cart containing text 'Add to cart' (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on add to cart button (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" And she clicks on add to cart button (completed)" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" And she clicks on cart icon" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on cart icon" width="1000"/>
+                <img src="89c587e7f112caea53dd0008a29e8d154c3140c368d8eacf07181ce6ee8874da.png" title=" she clicks on cart icon" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" And she clicks on cart icon (completed)" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" And she clicks on checkout button" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on checkout button" width="1000"/>
+                <img src="eac44c25e498a023496208fcd45ae0157681d2af28e77b4b3977c8889cba3db8.png" title=" she clicks on checkout button" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" And she clicks on checkout button (completed)" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" And she enter &quot;&quot; as first name" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she enter a value as first name" width="1000"/>
+                <img src="f8ee678e55338f36ec45da3498e98292501ef0399eee2befca813bfee016fb0f.png" title=" she enters '' into first name field" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" she enters '' into first name field (completed)" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" she enter a value as first name (completed)" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" And she enter &quot;&quot; as first name (completed)" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" And she enter &quot;&quot; as last name" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" she enter a value as last name" width="1000"/>
+                <img src="15f9d0f2d7fc7c2b979361bf2e87735fe8798a14dd48233ecf898c6d68ed8843.png" title=" she enters '' into last name field" width="1000"/>
+                <img src="3bf8261741b26bb95bc5da1c65c3e7ed36d36ddd15645de3dc0e9f0722bbe36d.png" title=" she enters '' into last name field (completed)" width="1000"/>
+                <img src="3bf8261741b26bb95bc5da1c65c3e7ed36d36ddd15645de3dc0e9f0722bbe36d.png" title=" she enter a value as last name (completed)" width="1000"/>
+                <img src="3bf8261741b26bb95bc5da1c65c3e7ed36d36ddd15645de3dc0e9f0722bbe36d.png" title=" And she enter &quot;&quot; as last name (completed)" width="1000"/>
+                <img src="3bf8261741b26bb95bc5da1c65c3e7ed36d36ddd15645de3dc0e9f0722bbe36d.png" title=" And she enter &quot;&quot; as postal code" width="1000"/>
+                <img src="3bf8261741b26bb95bc5da1c65c3e7ed36d36ddd15645de3dc0e9f0722bbe36d.png" title=" she enter a value as postal code" width="1000"/>
+                <img src="3bf8261741b26bb95bc5da1c65c3e7ed36d36ddd15645de3dc0e9f0722bbe36d.png" title=" she enters '' into postal code field" width="1000"/>
+                <img src="25fcaa9dbe87b19b281668b77f37a2e712692055989ff1419bd00e63e6e17555.png" title=" she enters '' into postal code field (completed)" width="1000"/>
+                <img src="25fcaa9dbe87b19b281668b77f37a2e712692055989ff1419bd00e63e6e17555.png" title=" she enter a value as postal code (completed)" width="1000"/>
+                <img src="25fcaa9dbe87b19b281668b77f37a2e712692055989ff1419bd00e63e6e17555.png" title=" And she enter &quot;&quot; as postal code (completed)" width="1000"/>
+                <img src="25fcaa9dbe87b19b281668b77f37a2e712692055989ff1419bd00e63e6e17555.png" title=" And she continue to confirm purchase" width="1000"/>
+                <img src="25fcaa9dbe87b19b281668b77f37a2e712692055989ff1419bd00e63e6e17555.png" title=" she continue to confirm purchase" width="1000"/>
+                <img src="25fcaa9dbe87b19b281668b77f37a2e712692055989ff1419bd00e63e6e17555.png" title=" she clicks on continue button" width="1000"/>
+                <img src="ebf3c30e8dc5244e01ebbe0bac2fefd273668c2719d70a2948803aaab50521d8.png" title=" she clicks on continue button (completed)" width="1000"/>
+                <img src="ebf3c30e8dc5244e01ebbe0bac2fefd273668c2719d70a2948803aaab50521d8.png" title=" she continue to confirm purchase (completed)" width="1000"/>
+                <img src="ebf3c30e8dc5244e01ebbe0bac2fefd273668c2719d70a2948803aaab50521d8.png" title=" And she continue to confirm purchase (completed)" width="1000"/>
+                <img src="ebf3c30e8dc5244e01ebbe0bac2fefd273668c2719d70a2948803aaab50521d8.png" title=" Then she will receive the error message &quot;Error: First Name is required&quot;" width="1000"/>
+                <img src="ebf3c30e8dc5244e01ebbe0bac2fefd273668c2719d70a2948803aaab50521d8.png" title=" she should see error message container with text value that is equal to: &lt;&quot;Error: First Name is required&quot;&gt;" width="1000"/>
+                <img src="ebf3c30e8dc5244e01ebbe0bac2fefd273668c2719d70a2948803aaab50521d8.png" title=" 4: Try to confirm the purchase without entering the nothing in the shipping information ({type_field=nothing, first_name=, last_name=, postal_code=, empty_field=First Name}) (completed): <span class='success-color'>SUCCESS</span>" width="1000"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.4.2</span>
+</div>
+</body>
+</html>
