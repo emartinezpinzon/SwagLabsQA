@@ -1,4 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Add article to cart","Add article to cart","SUCCESS","2022-12-29T21:53:13.615788457Z[Etc/UTC]","0.0","8.99"
-"Confirm purchase of items added to cart","Confirm the purchase of items added to the cart by adding correct shipping information","SUCCESS","2022-12-29T21:53:22.650640596Z[Etc/UTC]","0.0","4.25"
-"Confirm purchase of items added to cart","Try to confirm the purchase without entering the <type_field> in the shipping information","SUCCESS","2022-12-29T21:53:26.928759556Z[Etc/UTC]","0.0","14.86"
+"Add article to cart","Add article to cart","SUCCESS","2022-12-29T21:53:29.760858641Z[Etc/UTC]","0.0","10.57"
+"Confirm purchase of items added to cart","Confirm the purchase of items added to the cart by adding correct shipping information","SUCCESS","2022-12-29T21:53:40.357572033Z[Etc/UTC]","0.0","5.59"
+"Confirm purchase of items added to cart","Try to confirm the purchase without entering the <type_field> in the shipping information","SUCCESS","2022-12-29T21:53:45.979267201Z[Etc/UTC]","0.0","19.39"
