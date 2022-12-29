@@ -147,7 +147,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Add article to cart","type":"feature","href":"68b79210e938e604d76c3611092af367601b4b64dce98ba17637b3e069b882f8.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-check-circle-fill success-icon \u0027 title\u003d\u0027SUCCESS\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Add article to cart","type":"feature","href":"68b79210e938e604d76c3611092af367601b4b64dce98ba17637b3e069b882f8.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-hourglass-top pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -222,7 +222,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-12-2022 16:52</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 29-12-2022 17:44</span>
     <br style="clear:left"/>
 </div>
 
@@ -289,10 +289,11 @@
                                                                     <tr>
                                                                         <td style="width:95%;" class="toc-title">
                                                                             <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#930352ecdaf4d357e11ac6ebfe685b668664ebe2c82ab72cda4a9d8017f9dd58"
+                                                                                    <a href="#be75549a57fa9f6e95cf4570efc6776624c68c38f054a2ff0acacd90b1c6ba9f"
                                                                                        title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Add article Sauce Labs Fleece Jacket to cart
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Add article to cart
                                                                                     </a>
+                                                                                        (1 example)
                                                                                 </span>
                                                                         </td>
                                                                         <td>
@@ -303,14 +304,14 @@
                                                                                 <tr>
                                                                                     <td class="icons-bar">
                                                                                         <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="6e3372d150717ed67771a7f725c661c58a28317a972f4d635064902dd3f9983f.html"
+                                                                                           href="c2dee6eb190e6879984f5c1e6b8d00b2fd4a7fa4fd42072b00325b2e3f7cc791.html"
                                                                                            title="View test results">
                                                                                             <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                                                                             </a>
 
 
                                                                                             <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="6e3372d150717ed67771a7f725c661c58a28317a972f4d635064902dd3f9983f.html"
+                                                                                               href="c2dee6eb190e6879984f5c1e6b8d00b2fd4a7fa4fd42072b00325b2e3f7cc791.html"
                                                                                                title="View test results">
                                                                                                 <i class="bi bi-eyeglasses"></i>
                                                                                             </a>
@@ -328,17 +329,17 @@
                                             <div class="col-sm-12">
                                                     <h3>Scenarios</h3>
 
-                                                        <a name="e6dc4b36-9545-4e85-9a75-f7ebd447cde8"></a>
+                                                        <a name="3711bbae-fa4f-448d-b9f7-bb6a14698707"></a>
                                                         <p class="rule-tags inline-tag">
                                                         </p>
 
 
-                                                            <div class="scenario-docs card" id="930352ecdaf4d357e11ac6ebfe685b668664ebe2c82ab72cda4a9d8017f9dd58">
+                                                            <div class="scenario-docs card" id="be75549a57fa9f6e95cf4570efc6776624c68c38f054a2ff0acacd90b1c6ba9f">
                                                                 <div class="scenario-docs card-header success" style="min-height:1.5em;">
                                                                     <div>
                                                                         <span class="scenario-heading">
-                                                                            <a href="6e3372d150717ed67771a7f725c661c58a28317a972f4d635064902dd3f9983f.html"
-                                                                               title="View test results">Scenario: Add article Sauce Labs Fleece Jacket to cart</a>
+                                                                            <a href="c2dee6eb190e6879984f5c1e6b8d00b2fd4a7fa4fd42072b00325b2e3f7cc791.html"
+                                                                               title="View test results">Scenario Outline: Add article to cart</a>
                                                                         </span>
 
                                                                         <span class="example-tags inline-tag">
@@ -354,15 +355,27 @@
                                                                 </div>
                                                                 <div class="scenario-docs card-body">
                                                                         <p>Given Marianella is on login page</p>
-                                                                        <p>When she enter &quot;standard_user&quot; as username</p>
-                                                                        <p>And she enter &quot;secret_sauce&quot; as password</p>
+                                                                        <p>When she enter &quot;{username}&quot; as username</p>
+                                                                        <p>And she enter &quot;{password}&quot; as password</p>
                                                                         <p>And she clicks the login button</p>
-                                                                        <p>And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article</p>
+                                                                        <p>And she clicks on &quot;{article}&quot; article</p>
                                                                         <p>And she clicks on add to cart button</p>
                                                                         <p>And she clicks on cart icon</p>
                                                                         <p>Then she should be to see her cart</p>
-                                                                        <p>And she should be to see &quot;Sauce Labs Fleece Jacket&quot; article</p>
+                                                                        <p>And she should be to see &quot;{article}&quot; article</p>
                                                                     <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>username</th><th>password</th><th>article</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>standard_user</td><td>secret_sauce</td><td>Sauce Labs Fleece Jacket</td><td><a href='c2dee6eb190e6879984f5c1e6b8d00b2fd4a7fa4fd42072b00325b2e3f7cc791.html#beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -416,17 +429,21 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr class="scenario-result SUCCESS">
-                                                                    <td>
-                                                                            <a href="7eae6ce099811f4e45475e969200324ad9de6b26daf23e80012b2b2f6179d972.html">Add article to cart</a>
-                                                                    </td>
-                                                                    <td><a href="6e3372d150717ed67771a7f725c661c58a28317a972f4d635064902dd3f9983f.html">Add article Sauce Labs Fleece Jacket to cart</a></td>
-                                                                    <td>9</td>
-                                                                    <td>16:52:58</td>
-                                                                    <td>9s 812ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
-                                                                    </td>
-                                                                </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="7eae6ce099811f4e45475e969200324ad9de6b26daf23e80012b2b2f6179d972.html">Add article to cart</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="bi bi-table" title="Data Driven Scenario">
+                                                                                <a href="c2dee6eb190e6879984f5c1e6b8d00b2fd4a7fa4fd42072b00325b2e3f7cc791.html">1: Add article to cart </a>
+                                                                                    <br/>username=standard_user, password=secret_sauce, article=Sauce Labs Fleece Jacket
+                                                                        </td>
+                                                                        <td>9</td>
+                                                                        <td>17:44:03</td>
+                                                                        <td>8s 894ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
                                                         </tbody>
                                                     </table>
 

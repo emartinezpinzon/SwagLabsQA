@@ -1,4 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login to SwagLabs dashboard","Login with valid credentials to <type> user","SUCCESS","2022-12-22T16:53:27.881188551Z[Etc/UTC]","0.0","10.34"
-"Login to SwagLabs dashboard","Login with valid credentials to locked out user","SUCCESS","2022-12-22T16:53:38.231541962Z[Etc/UTC]","0.0","1.31"
-"Login to SwagLabs dashboard","Login with invalid credentials to <type> user","SUCCESS","2022-12-22T16:53:39.644460846Z[Etc/UTC]","0.0","5.65"
+"Login to SwagLabs dashboard","Login with valid credentials to <type> user","SUCCESS","2022-12-29T17:44:32.516698496Z[Etc/UTC]","0.0","10.21"
+"Login to SwagLabs dashboard","Login with invalid credentials to <type> user","SUCCESS","2022-12-29T17:44:42.73921373Z[Etc/UTC]","0.0","7.91"

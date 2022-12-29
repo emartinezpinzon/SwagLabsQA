@@ -222,7 +222,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-12-2022 16:53</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 29-12-2022 17:44</span>
     <br style="clear:left"/>
 </div>
 
@@ -291,8 +291,9 @@
                                                                             <span class="orphan-scenario-toc-entry">
                                                                                     <a href="#c33f06d07675717e65201f34c8792face2f29db13d4cfea400201707ff5a4840"
                                                                                        title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Confirm the purchase of items added to the cart by adding correct shipping information
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Confirm the purchase of items added to the cart by adding correct shipping information
                                                                                     </a>
+                                                                                        (1 example)
                                                                                 </span>
                                                                         </td>
                                                                         <td>
@@ -362,7 +363,7 @@
                                             <div class="col-sm-12">
                                                     <h3>Scenarios</h3>
 
-                                                        <a name="d267b837-6341-46fe-b0b6-ce2a73ce5ced"></a>
+                                                        <a name="13ae6baf-e3b3-4604-b7c0-5601fe18abde"></a>
                                                         <p class="rule-tags inline-tag">
                                                         </p>
 
@@ -372,7 +373,7 @@
                                                                     <div>
                                                                         <span class="scenario-heading">
                                                                             <a href="f1509cb648a34e7c3c464daef1344bc5a6d380cc77b67e5963f73078ee15cd35.html"
-                                                                               title="View test results">Scenario: Confirm the purchase of items added to the cart by adding correct shipping information</a>
+                                                                               title="View test results">Scenario Outline: Confirm the purchase of items added to the cart by adding correct shipping information</a>
                                                                         </span>
 
                                                                         <span class="example-tags inline-tag">
@@ -388,20 +389,32 @@
                                                                 </div>
                                                                 <div class="scenario-docs card-body">
                                                                         <p>Given Marianella is on login page</p>
-                                                                        <p>When she enter &quot;standard_user&quot; as username</p>
-                                                                        <p>And she enter &quot;secret_sauce&quot; as password</p>
+                                                                        <p>When she enter &quot;{username}&quot; as username</p>
+                                                                        <p>And she enter &quot;{password}&quot; as password</p>
                                                                         <p>And she clicks the login button</p>
-                                                                        <p>And she clicks on &quot;Sauce Labs Fleece Jacket&quot; article</p>
+                                                                        <p>And she clicks on &quot;{article}&quot; article</p>
                                                                         <p>And she clicks on add to cart button</p>
                                                                         <p>And she clicks on cart icon</p>
                                                                         <p>And she clicks on checkout button</p>
-                                                                        <p>And she enter &quot;Marianella&quot; as first name</p>
-                                                                        <p>And she enter &quot;Jerez&quot; as last name</p>
-                                                                        <p>And she enter &quot;570013&quot; as postal code</p>
+                                                                        <p>And she enter &quot;{first_name}&quot; as first name</p>
+                                                                        <p>And she enter &quot;{last_name}&quot; as last name</p>
+                                                                        <p>And she enter &quot;{postal_code}&quot; as postal code</p>
                                                                         <p>And she continue to confirm purchase</p>
                                                                         <p>And she finish the purchase</p>
-                                                                        <p>Then she should be able to see the &quot;CHECKOUT: COMPLETE!&quot;</p>
+                                                                        <p>Then she should be able to see the &quot;{message}&quot;</p>
                                                                     <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>username</th><th>password</th><th>article</th><th>first_name</th><th>last_name</th><th>postal_code</th><th>message</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>standard_user</td><td>secret_sauce</td><td>Sauce Labs Fleece Jacket</td><td>Marianella</td><td>Jerez</td><td>570013</td><td>CHECKOUT: COMPLETE!</td><td><a href='f1509cb648a34e7c3c464daef1344bc5a6d380cc77b67e5963f73078ee15cd35.html#beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -508,17 +521,21 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr class="scenario-result SUCCESS">
-                                                                    <td>
-                                                                            <a href="bc2dcc24b252a365665a7c80c21968aaeed4e426e80a5f187dddc8deada96d85.html">Confirm purchase of items added to cart</a>
-                                                                    </td>
-                                                                    <td><a href="f1509cb648a34e7c3c464daef1344bc5a6d380cc77b67e5963f73078ee15cd35.html">Confirm the purchase of items added to the cart by adding correct shipping information</a></td>
-                                                                    <td>14</td>
-                                                                    <td>16:53:08</td>
-                                                                    <td>4s 304ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
-                                                                    </td>
-                                                                </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="bc2dcc24b252a365665a7c80c21968aaeed4e426e80a5f187dddc8deada96d85.html">Confirm purchase of items added to cart</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="bi bi-table" title="Data Driven Scenario">
+                                                                                <a href="f1509cb648a34e7c3c464daef1344bc5a6d380cc77b67e5963f73078ee15cd35.html">1: Confirm the purchase of items added to the cart by adding correct shipping information </a>
+                                                                                    <br/>username=standard_user, password=secret_sauce, article=Sauce Labs Fleece Jacket, first_name=Marianella, last_name=Jerez, postal_code=570013, message=CHECKOUT: COMPLETE!
+                                                                        </td>
+                                                                        <td>14</td>
+                                                                        <td>17:44:12</td>
+                                                                        <td>4s 130ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
                                                                     <tr class="scenario-result SUCCESS">
                                                                         <td>
                                                                                 <a href="bc2dcc24b252a365665a7c80c21968aaeed4e426e80a5f187dddc8deada96d85.html">Confirm purchase of items added to cart</a>
@@ -529,8 +546,8 @@
                                                                                     <br/>type_field=first name, first_name=, last_name=Martinez, postal_code=570013, empty_field=First Name
                                                                         </td>
                                                                         <td>13</td>
-                                                                        <td>16:53:12</td>
-                                                                        <td>3s 795ms</td>
+                                                                        <td>17:44:16</td>
+                                                                        <td>3s 749ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
                                                                         </td>
                                                                     </tr>
@@ -544,8 +561,8 @@
                                                                                     <br/>type_field=last name, first_name=Emanuel, last_name=, postal_code=570013, empty_field=Last Name
                                                                         </td>
                                                                         <td>13</td>
-                                                                        <td>16:53:16</td>
-                                                                        <td>3s 798ms</td>
+                                                                        <td>17:44:20</td>
+                                                                        <td>3s 707ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
                                                                         </td>
                                                                     </tr>
@@ -559,8 +576,8 @@
                                                                                     <br/>type_field=postal code, first_name=Emanuel, last_name=Martinez, postal_code=, empty_field=Postal Code
                                                                         </td>
                                                                         <td>13</td>
-                                                                        <td>16:53:20</td>
-                                                                        <td>3s 549ms</td>
+                                                                        <td>17:44:24</td>
+                                                                        <td>3s 981ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
                                                                         </td>
                                                                     </tr>
@@ -574,8 +591,8 @@
                                                                                     <br/>type_field=nothing, first_name=, last_name=, postal_code=, empty_field=First Name
                                                                         </td>
                                                                         <td>13</td>
-                                                                        <td>16:53:24</td>
-                                                                        <td>3s 575ms</td>
+                                                                        <td>17:44:28</td>
+                                                                        <td>3s 782ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
                                                                         </td>
                                                                     </tr>
