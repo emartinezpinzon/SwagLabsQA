@@ -14,7 +14,8 @@ En este repositorio puede encontrar la implementación en código de estas prueb
 
 En este repositorio puede encontrar todos los entregables, en el directorio docs se encuentran los documentos que componen junto a esta implementación todos lo entregables descritos en el plan de pruebas.
 
-![plan de pruebas](./docs/resources/png/plan_pruebas.png)
+![plan de pruebas](./docs/resources/png/docs.png)
+![Matriz de riesgos](./docs/resources/png/matriz.png)
 
 ## Como ejecutar el proyecto
 
